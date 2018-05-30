@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Heroes } from '../heroes';
+import { Component } from '@angular/core';
+import { HeroService } from '../hero.service';
 import {Hero} from '../hero';
 
 @Component({
@@ -7,14 +7,10 @@ import {Hero} from '../hero';
   templateUrl: './heros.component.html',
   styleUrls: ['./heros.component.css']
 })
-export class HerosComponent implements OnInit {
-  heros = Heroes;
+export class HerosComponent{
+  heroes = this.heroService.getHero();
   selectedHero: Hero;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor(private heroService: HeroService) { }
   onSelect(hero: Hero) {
     this.selectedHero = hero;
   }
