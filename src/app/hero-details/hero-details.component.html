@@ -1,9 +1,9 @@
-<div class="container">
-  <h1 class="title">Hadeel Details</h1>
+<div class="container" *ngIf="hero">
+  <h1 class="title">{{hero.name +' Details'}} </h1>
   <div>id : {{hero.id}}</div>
 <div>
   <label>
-    name : <input type="text" placeholder="name" class="success" value="{{hero.name}}">
+    name : <input [(ngModel)]="hero.name" placeholder="name" class="success" value="{{hero.name}}">
   </label>
 </div>
 </div>
