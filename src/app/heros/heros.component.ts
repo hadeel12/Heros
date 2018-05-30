@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Herodata } from '../herodata';
+import { Heroes } from '../heroes';
 import {Hero} from '../hero';
 
 @Component({
@@ -8,7 +8,7 @@ import {Hero} from '../hero';
   styleUrls: ['./heros.component.css']
 })
 export class HerosComponent implements OnInit {
-  heros = Herodata;
+  heros = Heroes;
   selectedHero: Hero;
   constructor() { }
 
