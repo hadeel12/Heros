@@ -1,7 +1,8 @@
 <div class="container">
   <div class="col-md-4 col-md-offset-4">
 <ul class="list-group">
-  <li class="list-group-item list-group-item-success" *ngFor="let hero of heros">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
+  <li class="list-group-item list-group-item-success" *ngFor="let hero of heros" (click)="onSelect(hero)">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
 </ul>
   </div>
 </div>
+<app-hero-details  [hero]="selectedHero"></app-hero-details>
