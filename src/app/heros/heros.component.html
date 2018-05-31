@@ -1,4 +1,4 @@
-<app-hero-details  [hero]="selectedHero"></app-hero-details>
+<!--<app-hero-details  [hero]="selectedHero"></app-hero-details>-->
 <div class="container">
   <div class="col-md-4 col-md-offset-4">
     <h1 class="title">My Heroes</h1>
@@ -7,8 +7,8 @@
     </label>
     <button class="btn btn-primary btn-sm">Add</button>
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let hero of heroes" (click)="onSelect(hero)">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
+      <li class="list-group-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}" (click)="onSelect(hero)">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
     </ul>
   </div>
 </div>
-
+<router-outlet></router-outlet>

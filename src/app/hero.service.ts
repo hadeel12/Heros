@@ -10,4 +10,7 @@ export class HeroService {
   getHero() {
     return this.heroes;
   }
+  getById(id: number) {
+     return this.heroes.find(h => h.id === id);
+  }
 }
