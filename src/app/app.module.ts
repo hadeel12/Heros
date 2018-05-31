@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HerosComponent } from './heros/heros.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { HeroService} from './hero.service';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HerosComponent,
-    HeroDetailsComponent
+    HeroDetailsComponent,
+    DashbordComponent
   ],
   imports: [
     BrowserModule,

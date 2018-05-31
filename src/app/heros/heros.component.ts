@@ -7,7 +7,7 @@ import {Hero} from '../hero';
   templateUrl: './heros.component.html',
   styleUrls: ['./heros.component.css']
 })
-export class HerosComponent{
+export class HerosComponent {
   heroes = this.heroService.getHero();
   selectedHero: Hero;
   constructor(private heroService: HeroService) { }
