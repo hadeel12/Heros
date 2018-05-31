@@ -2,10 +2,9 @@
 <div class="container">
   <div class="title"> {{ title }} </div>
   <div class="row">
-  <button class="btn col-md-3">Dashbord</button>
-  <button class="btn col-md-3">Heroes</button>
+  <button class="btn col-md-3" routerLink="/dashboard">Dashbord</button>
+  <button class="btn col-md-3" routerLink="/heroes">Heroes</button>
 </div>
 </div>
-<app-dashbord></app-dashbord>
-<app-heros></app-heros>
+<router-outlet></router-outlet>
 
