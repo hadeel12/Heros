@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroService } from '../hero.service';
+import {Hero} from '../hero';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heros.component.css']
 })
 export class HerosComponent {
-  heroes = this.heroService.getHero();
+  heroes: Hero[];
   constructor(private heroService: HeroService) {
+    this.heroes = this.heroService.getHero();
+
   }
 }
