@@ -10,8 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroDetailsComponent implements OnInit {
   hero: Hero;
-  constructor(private heroService: HeroService,
-  private route: ActivatedRoute) { }
+  constructor(
+  private heroService: HeroService,
+  private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.selectHero();
