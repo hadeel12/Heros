@@ -1,9 +1,11 @@
 <div class="container" *ngIf="hero">
   <h1 class="title">{{hero.name +' Details'}} </h1>
+  <div class="col-md-4 col-md-offset-4">
   <div>id : {{hero.id}}</div>
 <div>
   <label>
     name : <input [(ngModel)]="hero.name" placeholder="name" class="success" value="{{hero.name}}">
   </label>
 </div>
+  </div>
 </div>
