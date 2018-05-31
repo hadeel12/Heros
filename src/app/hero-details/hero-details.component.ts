@@ -14,10 +14,10 @@ export class HeroDetailsComponent implements OnInit {
   private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getHero();
+    this.selectHero();
   }
 
-  getHero(): void {
+  selectHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.hero = this.heroService.getById(id);
   }
