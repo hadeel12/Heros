@@ -4,7 +4,6 @@ import { FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HerosComponent } from './heros/heros.component';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
-import { HeroService} from './hero.service';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { RoutingModule } from './routing.module';
 import { SearchComponent } from './search/search.component';
@@ -24,7 +23,7 @@ import { MessageComponent } from './message/message.component';
     FormsModule,
     RoutingModule
   ],
-  providers: [HeroService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
