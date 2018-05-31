@@ -1,6 +1,16 @@
 .title
 {
-  color:darkblue;
-  text-align: center;
   font-size: 80px;
+  margin: 15px 20px;
+}
+
+.btn {
+ background-color:darkslategrey;
+  margin-right: 10px;
+  color: white;
+
+}
+
+.row {
+  margin-left: 35%;
 }
