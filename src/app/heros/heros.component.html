@@ -7,7 +7,7 @@
     </label>
     <button class="btn btn-primary btn-sm">Add</button>
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}" (click)="onSelect(hero)">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
+      <li class="list-group-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
     </ul>
   </div>
 </div>
