@@ -7,6 +7,7 @@
 .btn {
  background-color:darkslategrey;
   margin-right: 10px;
+  margin-bottom: 50px;
   color: white;
 
 }
@@ -14,3 +15,4 @@
 .row {
   margin-left: 35%;
 }
+
