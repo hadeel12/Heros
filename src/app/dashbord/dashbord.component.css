@@ -1,3 +1,7 @@
-.container {
-  text-align:center;
+.box {
+  width:100%;
+  border:solid 1px;
+  padding:20%;
+  background-color:papayawhip;
+  text-align: center;
 }
