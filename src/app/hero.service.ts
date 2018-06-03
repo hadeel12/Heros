@@ -16,4 +16,7 @@ export class HeroService {
   getById(id: number): Observable<Hero> {
      return this.http.get<Hero>(this.heroUrl + '/' + id);
   }
+  addHero(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(this.heroUrl , hero);
+  }
 }

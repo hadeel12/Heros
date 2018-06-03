@@ -3,9 +3,9 @@
   <div class="col-md-4 col-md-offset-4">
     <h1 class="title">My Heroes</h1>
     <label>Hero Name :
-    <input type="text" placeholder="Name" />
+    <input #heroName type="text" placeholder="Name" />
     </label>
-    <button class="btn btn-primary btn-sm add-btn">Add</button>
+    <button class="btn btn-primary btn-sm add-btn" (click)="addHero(heroName.value)">Add</button>
     <ul class="list-group hero-list-position">
       <li class="list-group-item hero-list" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
     </ul>
