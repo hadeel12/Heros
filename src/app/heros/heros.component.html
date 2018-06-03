@@ -5,9 +5,9 @@
     <label>Hero Name :
     <input type="text" placeholder="Name" />
     </label>
-    <button class="btn btn-primary btn-sm">Add</button>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
+    <button class="btn btn-primary btn-sm addButton">Add</button>
+    <ul class="list-group listPosition">
+      <li class="list-group-item listItemColor" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
     </ul>
   </div>
 </div>

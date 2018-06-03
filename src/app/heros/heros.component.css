@@ -1,10 +1,11 @@
-.list-group-item {
+.listItemColor{
   background-color:papayawhip;
 }
-.btn {
+
+.addButton {
   margin-left: 10px;
 }
 
-.list-group {
+.listPosition {
   margin-top: 10px;
 }
