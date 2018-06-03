@@ -1,5 +1,6 @@
-.hero-list-color{
-  background-color:papayawhip;
+.hero-list{
+  background-color:darkgray;
+  font-weight: bold;
 }
 
 .add-btn {
