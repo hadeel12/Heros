@@ -11,7 +11,6 @@ import {Hero} from '../hero';
 export class HerosComponent {
   heroes: Hero[];
   constructor(private heroService: HeroService) {
-    this.heroes = this.heroService.getHero();
-
+    this.heroService.getHeroes().subscribe(hero => this.heroes = hero);
   }
 }
