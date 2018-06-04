@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {Hero} from './hero';
 import { MessageService } from './message.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class HeroService {
      return this.http.get<Hero>(this.heroesUrl + '/' + id);
   }
   addHero(hero: Hero): Observable<Hero> {
-    this.messageService.addMessage("HeroService: add hero name" + hero.name);
+    this.messageService.addMessage("HeroService: add hero name " + hero.name);
     return this.http.post<Hero>(this.heroesUrl , hero);
   }
   updateHero(hero: Hero) {
