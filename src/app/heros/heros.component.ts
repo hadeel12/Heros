@@ -17,4 +17,9 @@ export class HerosComponent {
   addHero(heroName: string) {
     this.heroService.addHero({id: null , name: heroName}).subscribe(hero => this.heroes.push(hero));
   }
+
+  deleteHero(hero: Hero){
+    this.heroes = this.heroes.filter(h => h.id  !== hero.id);
+    this.heroService.deleteHero(hero).subscribe();
+  }
 }
