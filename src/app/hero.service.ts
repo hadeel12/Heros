@@ -18,7 +18,7 @@ export class HeroService {
   }
   getById(id: number): Observable<Hero> {
     this.messageService.addMessage("HeroService: fetched heroes of id " + id );
-     return this.http.get<Hero>(this.heroesUrl + '/' + id);
+     return this.http.get<Hero>(this.heroesUrl +'/'+ id);
   }
   addHero(hero: Hero): Observable<Hero> {
     this.messageService.addMessage("HeroService: add hero name " + hero.name);
@@ -32,6 +32,11 @@ export class HeroService {
     const id = hero.id ;
     this.messageService.addMessage("HeroService: Delete Hero of id =" + id);
     return this.http.delete<Hero>(this.heroesUrl+'/'+id);
+  }
+  searchHero(term: string) {
+    if(term.trim() === '')return [];
+    this.messageService.addMessage("HeroService:found heroes matching " +term);
+    return this.http.get<Hero>(this.heroesUrl+'/?name='+term);
   }
 
 }
