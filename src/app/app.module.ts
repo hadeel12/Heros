@@ -11,6 +11,7 @@ import { MessageComponent } from './message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data-service';
+import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { InMemoryDataService } from './in-memory-data-service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService )
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
