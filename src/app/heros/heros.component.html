@@ -5,9 +5,12 @@
     <label>Hero Name :
     <input #heroName type="text" placeholder="Name" />
     </label>
-    <button class="btn btn-primary btn-sm add-btn" (click)="addHero(heroName.value)">Add</button>
+    <button class="btn btn-primary btn-sm add-btn" (click)="addHero(heroName.value);heroName.value=''">Add</button>
     <ul class="list-group hero-list-position">
-      <li class="list-group-item hero-list" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}<span class="close">&times;</span></li>
+      <li class="list-group-item hero-list" *ngFor="let hero of heroes">
+        <a routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}</a>
+        <button class="close" (click)="deleteHero(hero)">&times;</button>
+      </li>
     </ul>
   </div>
 </div>
