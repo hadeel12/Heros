@@ -4,7 +4,7 @@
   margin: 15px 20px;
 }
 
-.basic-btn {
+.dashbord-btn , .heroes-btn {
  background-color:darkslategrey;
   margin-right: 10px;
   margin-bottom: 50px;
