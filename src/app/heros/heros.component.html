@@ -7,8 +7,8 @@
     </label>
     <button class="btn btn-primary btn-sm add-hero-btn" (click)="addHero(heroName.value);heroName.value=''">Add</button>
     <ul class="list-group hero-list">
-      <li class="list-group-item hero-list-item" *ngFor="let hero of heroes">
-        <a routerLink="/details/{{hero.id}}">{{hero.id}}  &nbsp; {{hero.name}}</a>
+      <li class="list-group-item hero-list-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">
+        <a >{{hero.id}}  &nbsp; {{hero.name}}</a>
         <button class="close" (click)="deleteHero(hero)">&times;</button>
       </li>
     </ul>
