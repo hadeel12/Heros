@@ -30,7 +30,7 @@ export class HeroService {
       catchError(this.handleError('Add Hero'))
     );
   }
-  updateHero(hero: Hero) {
+  updateHero(hero: Hero):Observable<Hero> {
     return this.http.put(this.heroesUrl , hero).pipe(
       tap(()=>this.logMessage("Update Hero of id =" + hero.id) ),
       catchError(this.handleError('Update Hero'))
@@ -43,8 +43,8 @@ export class HeroService {
       catchError(this.handleError('Delete Hero'))
     );
   }
-  searchHero(term: string) {
-    if(term.trim() === '')return [];
+  searchHero(term: string):Observable<Hero> {
+    if(term.trim() === '')return of([] as any);
     return this.http.get<Hero>(this.heroesUrl+'/?name='+term).pipe(
       tap(()=>this.logMessage("found heroes matching " +term) ),
       catchError(this.handleError('Search Hero'))
@@ -57,6 +57,6 @@ export class HeroService {
       return of([]);
     };
   }
-  logMessage(message: string) {
+  logMessage(message: string):void {
     this.messageService.addMessage("HeroService: " + message)  }
 }
