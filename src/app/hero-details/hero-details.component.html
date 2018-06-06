@@ -1,15 +1,17 @@
 <div class="container well" *ngIf="hero">
   <h1 class="title">{{hero.name +' Details'}} </h1>
-  <div class="col-md-4 col-md-offset-4">
-  <div>id : {{hero.id}}</div>
-    <div>
-  <label>
-    name : <input [(ngModel)]="hero.name" placeholder="name" class="success">
-  </label>
-  </div>
-    <div>
-    <button class="btn btn-sm" (click)="goBack()">Go Back</button>
-    <button class="btn btn-success btn-sm" (click)="updateHero()">Save</button>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div>id : {{hero.id}}</div>
+      <div>
+       <label>
+         name : <input [(ngModel)]="hero.name" placeholder="name" class="success">
+       </label>
+      </div>
+      <div>
+        <button class="btn btn-sm" (click)="goBack()">Go Back</button>
+        <button class="btn btn-success btn-sm" (click)="updateHero()">Save</button>
+      </div>
     </div>
   </div>
 </div>

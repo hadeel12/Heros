@@ -1,17 +1,18 @@
-<!--<app-hero-details  [hero]="selectedHero"></app-hero-details>-->
 <div class="container">
-  <div class="col-md-4 col-md-offset-4">
-    <h1 class="title">My Heroes</h1>
-    <label>Hero Name :
-    <input #heroName type="text" placeholder="Name" />
-    </label>
-    <button class="btn btn-primary btn-sm add-hero-btn" (click)="addHero(heroName.value);heroName.value=''">Add</button>
-    <ul class="list-group hero-list">
-      <li class="list-group-item hero-list-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">
-        <a >{{hero.id}}  &nbsp; {{hero.name}}</a>
-        <button class="close" (click)="deleteHero(hero)">&times;</button>
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h1 class="title">My Heroes</h1>
+      <label>Hero Name :
+        <input #heroName type="text" placeholder="Name" />
+      </label>
+      <button class="btn btn-primary btn-sm add-hero-btn" (click)="addHero(heroName.value);heroName.value=''">Add</button>
+      <ul class="list-group hero-list">
+        <li class="list-group-item hero-list-item" *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}">
+          <a >{{hero.id}}  &nbsp; {{hero.name}}</a>
+          <button class="close" (click)="deleteHero(hero)">&times;</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <router-outlet></router-outlet>
