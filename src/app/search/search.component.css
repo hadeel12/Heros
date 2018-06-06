@@ -1,16 +1,15 @@
-.search-input{
-  padding: 5px 30px;
-  margin-top: 10px;
+.hero-list {
+ padding-left: 0;
 }
-
 .hero-list-item {
- /*padding-right: 137%;*/
-  padding-right: 218px;
+  list-style-type: none;
+  border:darkgray solid  1px;
+  border-top: none;
+  padding: 3px 162px 3px 10px;
 }
 .hero-list-item:hover {
   background-color: darkgray;
 }
-
 .hero-list-item a {
   text-decoration: none;
   color: black;

@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="col-md-2">
-  <h3 class="title">Hero Search </h3>
-  <input #searchTerm type="text" placeholder="search" class="search-input" (keyup)="search(searchTerm.value)"/>
-    <ul *ngIf="searchTerm.value" class="list-group" >
-      <li *ngFor="let hero of heroes" class="list-group-item hero-list-item" routerLink="/details/{{hero.id}}">
+  <div class="row">
+    <div class="col-md-2">
+      <h3 class="title">Hero Search </h3>
+      <input #searchTerm type="text" placeholder="search" (keyup)="search(searchTerm.value)"/>
+      <ul *ngIf="searchTerm.value" class="hero-list" >
+       <li *ngFor="let hero of heroes" class="hero-list-item" routerLink="/details/{{hero.id}}">
         <a>{{hero.name}}</a>
-      </li>
-    </ul>
-</div>
+       </li>
+      </ul>
+    </div>
+  </div>
 </div>
