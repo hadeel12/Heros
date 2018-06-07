@@ -1,5 +1,5 @@
 <div class="container">
   <h3 class="msg-info"> Message : </h3>
   <button class="btn btn-primary" (click)="clearMessages()">clear</button>
-  <div *ngFor="let message of messages"><h4>{{message}}</h4></div>
+  <div *ngFor="let message of getMessages()"><h4>{{message}}</h4></div>
 </div>

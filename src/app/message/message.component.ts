@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import { MessageService } from '../message.service';
 
 @Component({
@@ -7,15 +7,19 @@ import { MessageService } from '../message.service';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
-  messages: string[];
-  constructor(private messageService: MessageService ) {
-    this.messages = this.messageService.messages;
+
+  constructor(private messageService: MessageService, private cdr: ChangeDetectorRef ) {
+    messageService.getMessageStream().subscribe(() => {
+      cdr.detectChanges();
+    });
   }
   ngOnInit() {
   }
   clearMessages() {
     this.messageService.clearMessages();
-    this.messages = this.messageService.messages;
+  }
+  getMessages():string[] {
+    return this.messageService.getMessages();
   }
 
 }
